@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:lesson/getController.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -13,7 +15,7 @@ void main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       home: ToDoApp(),
       debugShowCheckedModeBanner: false,
     );
@@ -102,7 +104,6 @@ class _ToDoAppState extends State<ToDoApp> {
             ),
           ),
           Container(
-            // padding: EdgeInsets.symmetric(horizontal: 10),
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(
@@ -195,7 +196,8 @@ class _ToDoAppState extends State<ToDoApp> {
                             ),
                             IconButton(
                               icon: Icon(Icons.delete, color: Colors.red),
-                              onPressed: () => remove(index),
+                              onPressed: () =>dialogController().showDialog((){remove(index);
+                              Get.back();}),
                             ),
                           ],
                         ),
