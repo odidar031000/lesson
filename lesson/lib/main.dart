@@ -73,6 +73,7 @@ class _ToDoAppState extends State<ToDoApp> {
           )
         ],
       ),
+      
       body: Column(
         children: [
           Container(
@@ -101,9 +102,9 @@ class _ToDoAppState extends State<ToDoApp> {
             ),
           ),
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 16),
+            // padding: EdgeInsets.symmetric(horizontal: 10),
             child: Padding(
-              padding: const EdgeInsets.all(15.0),
+              padding: const EdgeInsets.all(8.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -135,7 +136,7 @@ class _ToDoAppState extends State<ToDoApp> {
                   gradient: LinearGradient(
                 colors: [
                   const Color.fromARGB(255, 5, 16, 88),
-                  const Color.fromARGB(195, 67, 36, 126)
+                  const Color.fromARGB(209, 98, 72, 150)
                 ], 
                 begin: Alignment.topRight, 
                 end: Alignment.bottomLeft,
@@ -207,7 +208,7 @@ class _ToDoAppState extends State<ToDoApp> {
           )
         ],
       ),
-      floatingActionButton: Row(
+      bottomNavigationBar: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           FloatingActionButton(
