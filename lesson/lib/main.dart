@@ -81,7 +81,7 @@ class _ToDoAppState extends State<ToDoApp> {
                 gradient: LinearGradient(
               colors: [
                 const Color.fromARGB(255, 5, 16, 88),
-                const Color.fromARGB(195, 67, 36, 126)
+                const Color.fromARGB(195, 67, 36, 127)
               ], 
               begin: Alignment.topRight, 
               end: Alignment.bottomLeft,
